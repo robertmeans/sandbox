@@ -1,0 +1,11 @@
+*.sass-cache*
+Thumbs.db
+node_modules
+vendor
+php-error.log
+.gitattributes
+sftp-config.json
+package-lock.json
+_errors.txt
+composer.lock
+package.json
