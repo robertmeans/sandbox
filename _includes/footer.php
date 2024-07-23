@@ -5,4 +5,10 @@
 </body>
 </html>
 
-<?php db_disconnect($db); ?>
+<?php // procedural
+// db_disconnect($db); 
+?>
+
+<?php // oop
+$db->close(); 
+?>
