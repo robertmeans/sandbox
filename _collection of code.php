@@ -21,3 +21,15 @@ $bar = $foo ?? '1';
 htmlspecialchars();
 // better to shorten it in a function once...
 function h($string="") { return htmlspecialchars($string); }
+
+
+/*                                                     check if form is submitted */
+function reques_is_post() {
+  return $_SERVER['REQUEST_METHOD'] == 'POST';
+}
+// then whenever you want to verify a post request...
+if (request_is_post()) {
+  // process the form
+}
+
+// can do the same for GET request, of course
