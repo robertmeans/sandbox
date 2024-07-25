@@ -38,11 +38,22 @@ if (!$result) {
 $count = $result->num_rows;
 echo $count . '<br><br>';
 
-  $i = 1;
-  while ($task = $result->fetch_assoc()) {
-    echo $i . ' ' . $task['last_name'] . ', ' . $task['first_name'] . '<br>';
-    $i++;
+  // $i = 1;
+  // while ($task = $result->fetch_assoc()) {
+  //   echo $i . ' ' . $task['last_name'] . ', ' . $task['first_name'] . '<br>';
+  //   $i++;
+  // }
+
+  // exact same loop as above but as a for loop...
+  for ($i=1; $task = $result->fetch_assoc(); $i++) {
+    // echo $i . ' ' . $task['last_name'] . ', ' . $task['first_name'] . '<br>';
+    // ^ same as...
+    echo "{$i} {$task['last_name']}, {$task['first_name']} <br>";
+    // ^ same as...
+    echo "$i {$task['last_name']}, {$task['first_name']} <br>";
   }
+
+
 
 ?>
 
